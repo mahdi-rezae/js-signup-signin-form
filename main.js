@@ -26,6 +26,7 @@ signup.addEventListener('submit', event => {
     Array.from(signUp).slice(0, -1).forEach((input) => {
         userData.push(input.value);
     });
+    //checkPassword();
     saveUserData(userData);
     signup.reset();
     input.forEach(inputField => inputField.nextElementSibling.classList.remove('filled'));
@@ -39,7 +40,6 @@ signin.addEventListener('submit', event => {
     Array.from(signIn).slice(0, -1).forEach((input) => {
         userInput.push(input.value);
     });
-    checkPassword();
     getUserData(userInput);
     signin.reset();
     input.forEach(inputField => inputField.nextElementSibling.classList.remove('filled'));
